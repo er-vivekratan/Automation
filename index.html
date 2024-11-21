@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Homes</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="template.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+<div class="navbar" id="myNavbar">
+    <a class="icon" id="menuIcon" onclick="myFunction()">
+        &#9776; <!-- Menu icon -->
+    </a>
+    <a class="icon" id="backIcon" onclick="myFunction()" style="display: none;">
+        &#x2190; <!-- Back icon -->
+    </a>
+    <div class="logo">
+        <img src="Logo.png" id="logo-img" alt="Logo">
+        <h1>CasaConnect</h1>
+    </div>
+    <a href="#home" status="active" onclick="setActive(this)">Home</a>
+    <a href="Store.html" onclick="setActive(this)">Store</a>
+    <a href="#about" onclick="setActive(this)">About</a>
+    <a href="#contact" onclick="setActive(this)">Contact</a>
+    <a href="#login" class="login-icon">
+        Login
+    </a>
+</div>
+
+<div id="body">
+    <div class="head">
+        <input type="search">
+        <i class="fas fa-search"></i>
+        <div id="milk" class="category" onclick="setActivecat(this)">Automate
+            <div class="category-index">
+                <button class="category button">Home</button><br>
+                <button class="category button">School</button><br>
+                <button class="category button">Office</button><br>
+                <button class="category button">Hotel</button><br>
+                <button class="category button">Hospital</button><br>
+                <button class="category button">Industry</button><br>
+            </div>
+        </div>
+        <div id="chara" class="category" onclick="setActivecat(this)">Devices
+            <div class="category-index">
+                <button class="category button">Camera</button><br>
+                <button class="category button">Sensor</button><br>
+                <button class="category button">Door Unlock</button><br>
+                <button class="category button">Home Security</button><br>
+                <button class="category button">Protection</button><br>
+                <button class="category button">Climate Sensor</button><br>
+            </div>
+        </div>
+        <div id="animal" class="category">Store</div>
+
+        <!--https://www.motherdairy.com/-->
+    </div>
+    <div class="proto">
+        <div class="proto-child" id="proto-left">
+            <img src="proto-img-1.png" class="proto-img">
+            <h3>Live in the Future</h3>
+            <p>Control Everything at Your Fingertips. <br> Turn on your lights, play your favourite music or <br> change your room temperature, <br> at the tap of your smartphone.</p>
+        </div>
+        <div class="proto-child" id="proto-mid">
+            <img src="proto-img-2.png" class="proto-img">
+            <h3>Run Personalized Schedules</h3>
+            <p>Have your coffee ready when you wake up. <br> Automatically turn everything off when you leave <br> for work. Experience true intelligence.</p>
+        </div>
+        <div class="proto-child" id="proto-right">
+            <img src="proto-img-3.png" class="proto-img">
+            <h3>Talk to Your Home or Make it Talk.</h3>
+            <p>Simply talk to your virtual voice assistant, and ask <br> it to do anything for you– be it ordering groceries to <br> solving a math problem.</p>
+        </div>
+    </div>
+    <div class="gallery">
+        <div class="thumbnail">
+            <img src="img1.jpeg" alt="Image 1" class="img-slide">
+        </div>
+        <div class="thumbnail">
+            <img src="img2.jpeg" alt="Image 2" class="img-slide">
+        </div>
+        <div class="thumbnail">
+            <img src="img3.jpeg" alt="Image 3" class="img-slide">
+        </div>
+    </div>
+    <div class="specs">
+        <div class="specs-part">
+            <font class="specs-detail" style="color: orange; font-size: 99px;">15</font><br>
+            <label class="specs-detail-label">Products</label>
+        </div>
+        <div class="specs-part">
+            <font class="specs-detail" style="color: purple; font-size: 99px;">40</font><br>
+            <label class="specs-detail-label">Use Cases</label>
+        </div>
+        <div class="specs-part">
+            <font class="specs-detail" style="color: green; font-size: 99px;">80<font style="font-size: 37px;">%</font></font><br>
+            <label class="specs-detail-label">Energy Saving</label>
+        </div>
+    </div>
+    <div style="height: 500px; margin-top: 100px;">
+        <img src="Howitwork.png">
+    </div>
+</div>
+
+
+
+
+<footer style="margin-top: 850px;">
+    <div class="footer-container">
+      <div class="footer-section about">
+        <h2>Home Automation</h2>
+        <p>By BAPPAhive</p>
+        <p>Fully AI Automated Homes</p>
+      </div>
+  
+      <!--div class="footer-section links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Marketplace</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Styles</a></li>
+          <li><a href="#">FAQs</a></li>
+        </ul>
+      </div-->
+  
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p>Email: help@casaconnect.in</p>
+        <p>Phone: +91 9319828480</p>
+        <p>Address: SoICT, <br> Gautam Buddha University, Greater Noida</p>
+      </div>
+  
+      <div class="footer-section social">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2024 AI Homes. All Rights Reserved.</p>
+    </div>
+  </footer>
+<style>
+
+
+
+div[id="body"]{
+    height: 999px;
+    background-color: #f4f4f4;
+}
+div[class="head"]{
+    padding: 10px;
+    background-color: #fff;
+}
+input[type="search"]{
+    width: 350px;
+    height: 35px;
+    outline: none;
+    padding-left: 20px;
+    float: left;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
+i[class="fas fa-search"]{
+    height: 35px;
+    width: 35px;
+    float: left;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: -35px;
+}
+div[class="category"]{
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    cursor: hand;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+div[class="category"]:hover{
+    /*background-color: #e9e4e4;*/
+    transition: 0.5s ease-in;
+    cursor: hand;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    margin-bottom: -100px;
+    position: relative;
+    color: #fff;
+}
+
+/*footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footer-section h2, .footer-section h3 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffc107;
+}
+
+.footer-section .social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-section .social a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+@media screen and (max-width: 600px){
+    button[class="category"]{
+        margin-top: 20px;
+        margin-left: 0;
+    }
+}
+</style>
+<script>
+
+let slideIndex = 0;
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+
+showSlides();
+
+
+
+</script>
+
+</body>
+</html>

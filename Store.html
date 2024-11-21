@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAPPAhive - Home Automation</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="template.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a class="icon" id="menuIcon" onclick="myFunction()">
+            &#9776; <!-- Menu icon -->
+        </a>
+        <a class="icon" id="backIcon" onclick="myFunction()" style="display: none;">
+            &#x2190; <!-- Back icon -->
+        </a>
+        <div class="logo">
+            <img src="Logo.png" id="logo-img" alt="Logo">
+            <h1>CasaConnect</h1>
+        </div>
+        <a href="index.html" onclick="setActive(this)">Home</a>
+        <a href="Store.html" status="active" onclick="setActive(this)">Store</a>
+        <a href="About.html" onclick="setActive(this)">About</a>
+        <a href="#contact" onclick="setActive(this)">Contact</a>
+        <a href="#login" class="login-icon">
+            Login
+        </a>
+    </div>
+    
+    <div id="body">
+        <div class="head">
+            <input type="search">
+            <i class="fas fa-search"></i>
+            <div id="milk" class="category" onclick="setActivecat(this)">Appliances
+            </div>
+            <div id="chara" class="category" onclick="setActivecat(this)">Modules
+            </div>
+            <div id="milk" class="category" onclick="setActivecat(this)">Installers
+            </div>
+            <div id="chara" class="category" onclick="setActivecat(this)">Sensors
+            </div>
+    
+            <!--https://www.motherdairy.com/-->
+        </div>
+    <div class="product-container">
+        <div class="product-section">
+            <div class="product-image-section">
+                <img class="product-image" src="p1.jpeg">
+            </div>
+            <div class="product-title">
+                <label class="product-label">Smart Home WiFi Mobile Remote Control Siri/Alexa/Google Voice Control On/Off Switch 10A 433MHz Version</label><br>
+            </div>
+            <p class="product-availability">Availability: In stock</p><br>
+            <label for="price">₹ 949.00</label><br>
+            <button class="Add-to-Cart">Add to Cart</button>
+            <button class="Buy-Now">Buy Now</button>
+        </div>
+        <div class="product-section">
+            <div class="product-image-section">
+                <img class="product-image" src="p2.jpeg">
+            </div>
+            <div class="product-title">
+                <label class="product-label">WiFi Smart EU Plug Type Eswitch</label><br>
+            </div>
+            <p class="product-availability">Availability: 14  Left</p><br>
+            <label for="price">₹ 120.00</label><br>
+            <button class="Add-to-Cart">Add to Cart</button>
+            <button class="Buy-Now">Buy Now</button>
+        </div>
+        <div class="product-section">
+            <div class="product-image-section">
+                <img class="product-image" src="p3.jpeg">
+            </div>
+            <div class="product-title">
+                <label class="product-label">Wall Touch switch Sensor inbuild Board Pannel, 220v, 150v</label><br>
+            </div>
+            <p class="product-availability">Availability: In Stock</p><br>
+            <label for="price">₹ 629.00</label><br>
+            <button class="Add-to-Cart">Add to Cart</button>
+            <button class="Buy-Now">Buy Now</button>
+        </div>
+    </div>
+    <footer style="margin-top: 85px;">
+        <div class="footer-container">
+          <div class="footer-section about">
+            <h2>Home Automation</h2>
+            <p>By BAPPAhive</p>
+            <p>Fully AI Automated Homes</p>
+          </div>
+      
+          <!--div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Styles</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div-->
+      
+          <div class="footer-section contact">
+            <h3>Contact Us</h3>
+            <p>Email: help@casaconnect.in</p>
+            <p>Phone: +91 9319828480</p>
+            <p>Address: SoICT, <br> Gautam Buddha University, Greater Noida</p>
+          </div>
+      
+          <div class="footer-section social">
+            <h3>Follow Us</h3>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      
+        <div class="footer-bottom">
+          <p>&copy; 2024 AI Homes. All Rights Reserved.</p>
+        </div>
+      </footer>
+
+
+<style>
+
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(90deg, #388E3C, #81C784);
+    color: white;
+    padding: 20px 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+main {
+    text-align: center;
+    padding: 30px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 30px;
+}
+canvas {
+    width: 200px; /* Matches the container size */
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+    background: transparent; /* Allow for alpha blending */
+}
+
+div[class="product-container"]{
+    display: flex;
+    width: 100%;
+}
+
+div[class="product-section"]{
+    height: 500px;
+    width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    margin: 40px;
+}
+
+div[class="product-image-section"]{
+    height: 200px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+img[class="product-image"]{
+    width: 80%;
+}
+
+div[class="product-title"]{
+    height: 100px;
+}
+
+label[class="product-label"]{
+    text-align: left;
+}
+
+button[class="Add-to-Cart"], button[class="Buy-Now"]{
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+
+</style>
+
+
+
+
+
+<style for="Navbar">
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('fonts/HostGrotesk-Regular.woff2') format('woff2'),
+         url('fonts/HostGrotesk-Regular.woff') format('woff'),
+         url('fonts/HostGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    background: transparent;
+    height: 90%;
+    padding: 20px;
+    font-family: Cambria Math;
+    line-height: 1;
+    color: #000;
+    flex: 1; /* Flex property to allow resizing */
+}
+.logo img {
+    height: 190%; /* Adjust based on your logo size */
+    margin-right: 30px;
+    mix-blend-mode: multiply;
+    display: none;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #abdbec;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    z-index: 1000;
+    padding: 20px;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center align items vertically */
+}
+.navbar a {
+    color: #000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    margin-right: 10px; /* Adjust margin for better spacing */
+}
+.navbar a:hover {
+    background-color: #8dc9e1;
+    color: #000;
+}
+.navbar .icon, .navbar .login-icon {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+.navbar .icon {
+    cursor: pointer;
+    display: none;
+}
+a[class="icon"]:hover{
+    font-weight: light;
+    background-color: transparent;
+}
+.navbar .login-icon {
+    margin-left: auto; /* Push login icon to the right */
+}
+.login-icon {
+    width: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a[status="active"] {
+    background-color: #8dc9e1;
+}
+.no-scroll {
+    overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+    .logo {
+        flex: 1; /* Ensure the logo takes up available space */
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between; /* Space between icon and logo */
+    }
+    .navbar.responsive {
+        flex-direction: column; /* Stack items vertically */
+        height: 100vh;
+        overflow-y: auto;
+        justify-content: left;
+    }
+    .navbar.responsive .logo {
+        display: none; /* Hide the logo when menu is active */
+    }
+    .navbar a {
+        display: none;
+    }
+    .navbar.responsive a {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5px 0; /* Reduce margin between buttons */
+    }
+    .navbar a.icon {
+        display: block;
+        font-size: 21px;
+        margin-top: -8px;
+        order: -1; /* Ensure the icon appears first in responsive view */
+    }
+    .navbar.responsive .icon {
+        position: static;
+        margin-right: 10px; /* Adjust based on your needs */
+    }
+    .navbar .login-icon {
+        order: 1; /* Ensure the login icon appears after other items */
+        margin: 10px -15px;
+        height: 15px;
+        width: 25px;
+        display: none;
+    }
+    a[class="icon"]:hover{
+        font-weight: lighter;
+    }
+    img[id="logo-img"] {
+        display: none;
+    }
+    a {
+        margin-top: 5px; /* Reduce margin between menu buttons */
+    }
+    .proto{
+        margin-left: -20px;
+        height: 100px;
+    }
+    .proto-child{
+        font-size: 9px;
+        width: 50px;
+        height: 100px;
+    }
+    .proto-child p{
+        display: none;
+    }
+    .gallery{
+        height: 300px;
+    }
+    .specs-detail{
+        font-size: 11px;
+    }
+    .specs-detail-label{
+        font-size: 14px;
+    }
+}
+div[id="body"]{
+    height: auto;
+    background-color: #f4f4f4;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background-color: #000;
+    margin-bottom: -100px;
+    position: relative;
+    color: #fff;
+}
+
+/*footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footer-section h2, .footer-section h3 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffc107;
+}
+
+.footer-section a i {
+    color: #fff;
+}
+
+.footer-section .social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-section .social a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+</style>
+
+<style>
+
+div[class="head"]{
+    padding: 10px;
+    background-color: #fff;
+}
+input[type="search"]{
+    width: 350px;
+    height: 35px;
+    outline: none;
+    padding-left: 20px;
+    float: left;
+}
+input[type="search"]::-webkit-search-cancel-button{
+    display: none;
+}
+i[class="fas fa-search"]{
+    height: 35px;
+    width: 35px;
+    float: left;
+    background-color: transparent;
+    margin-top: 10px;
+    margin-left: -35px;
+}
+div[class="category"]{
+    height: 35px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    outline: none;
+    display: inline-flex;
+    cursor: hand;
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+div[class="category"]:hover{
+    /*background-color: #e9e4e4;*/
+    transition: 0.5s ease-in;
+    cursor: hand;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #000;
+    margin-bottom: -100px;
+    position: relative;
+    color: #fff;
+}
+
+</style>
+
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAPPAhive - Home Automation</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="template.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a class="icon" id="menuIcon" onclick="myFunction()">
+            &#9776; <!-- Menu icon -->
+        </a>
+        <a class="icon" id="backIcon" onclick="myFunction()" style="display: none;">
+            &#x2190; <!-- Back icon -->
+        </a>
+        <div class="logo">
+            <img src="Logo.png" id="logo-img" alt="Logo">
+            <h1>CasaConnect</h1>
+        </div>
+        <a href="index.html" onclick="setActive(this)">Home</a>
+        <a href="Store.html" onclick="setActive(this)">Store</a>
+        <a href="About.html" status="active" onclick="setActive(this)">About</a>
+        <a href="Contact.html" onclick="setActive(this)">Contact</a>
+        <a href="#login" class="login-icon">
+            Login
+        </a>
+    </div>
+    
+    <div id="body">
+
+
+            
+            
+
+            <div class="about">
+                <h1>About Home Automation Tools</h1>
+                <p>
+                    Welcome to Home Automation Tools, your one-stop solution for automating your home with the latest and most advanced technology. Founded by Bappa Rawal, our mission is to make everyday living simpler, smarter, and more convenient. With our state-of-the-art tools, you can control various aspects of your home environment with ease and efficiency.
+                </p>
+                <h2>Our Vision</h2>
+                <p>
+                    Our vision is to revolutionize the way people interact with their homes. We aim to create an ecosystem where all your home devices are interconnected, providing seamless control and unparalleled convenience. We believe in a future where homes are not just places to live, but dynamic environments that adapt to your needs and preferences.
+                </p>
+                <h2>Our Mission</h2>
+                <p>
+                    Our mission is to provide innovative, reliable, and affordable home automation solutions that enhance the quality of life for our customers. We are committed to delivering products that are easy to use and integrate, ensuring that everyone can enjoy the benefits of a smart home.
+                </p>
+                <h2>Our Values</h2>
+                <p>
+                    <strong>Innovation:</strong> We constantly strive to develop new technologies and improve our existing products to stay ahead of the curve.
+                </p>
+                <p>
+                    <strong>Customer Focus:</strong> Our customers are at the heart of everything we do. We listen to their needs and feedback to provide the best possible solutions.
+                </p>
+                <p>
+                    <strong>Quality:</strong> We are dedicated to maintaining the highest standards of quality in all our products and services.
+                </p>
+                <p>
+                    <strong>Integrity:</strong> We conduct our business with honesty and integrity, ensuring that our customers can trust us to deliver on our promises.
+                </p>
+                <div class="team">
+                    <h2>Our Team</h2>
+                    <ul>
+                        <li><strong>Vinayak Dwivedi</strong> - Lead Developer</li>
+                        <li><strong>Vivek Ratan</strong> - Hardware Engineer</li>
+                        <li><strong>Chirag Sharma</strong> - Bussiness  Specialist</li>
+                        <li><strong>Bhanu Pratap</strong> - Customer Support Specialist</li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <style>
+                body {
+                    font-family: 'Open Sans', sans-serif;
+                    background-color: #f0f4f8;
+                    color: #333;
+                }
+                .about {
+                    max-width: 800px;
+                    margin: 40px auto;
+                    padding: 30px;
+                }
+                .about h1 {
+                    text-align: center;
+                    color: #00796b;
+                    font-size: 2.5em;
+                }
+                .about h2 {
+                    color: #00796b;
+                    font-size: 2em;
+                    margin-top: 20px;
+                }
+                .about p {
+                    line-height: 1.8;
+                    color: #555;
+                }
+                .team {
+                    margin-top: 30px;
+                }
+                .team h2 {
+                    color: #00796b;
+                    text-align: center;
+                    font-size: 2em;
+                }
+                .team ul {
+                    list-style-type: none;
+                    padding: 0;
+                }
+                .team ul li {
+                    background: #e0f2f1;
+                    margin: 10px 0;
+                    padding: 15px;
+                    border-left: 5px solid #00796b;
+                    border-radius: 5px;
+                    transition: background 0.3s;
+                }
+                .team ul li:hover {
+                    background: #b2dfdb;
+                }
+            </style>
+
+        

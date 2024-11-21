@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('fonts/HostGrotesk-Regular.woff2') format('woff2'),
+         url('fonts/HostGrotesk-Regular.woff') format('woff'),
+         url('fonts/HostGrotesk-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.logo {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    background: transparent;
+    height: 90%;
+    padding: 20px;
+    font-family: Cambria Math;
+    line-height: 1;
+    color: #000;
+    flex: 1; /* Flex property to allow resizing */
+}
+.logo img {
+    height: 190%; /* Adjust based on your logo size */
+    margin-right: 30px;
+    mix-blend-mode: multiply;
+    display: none;
+}
+.navbar {
+    overflow: hidden;
+    background-color: #abdbec;
+    position: sticky;
+    top: 0;
+    height: 50px;
+    z-index: 1000;
+    padding: 20px;
+    display: flex; /* Enable flexbox */
+    align-items: center; /* Center align items vertically */
+}
+.navbar a {
+    color: #000;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center; /* Center align items vertically */
+    margin-right: 10px; /* Adjust margin for better spacing */
+}
+.navbar a:hover {
+    background-color: #8dc9e1;
+    color: #000;
+}
+.navbar .icon, .navbar .login-icon {
+    display: flex;
+    align-items: center; /* Center align items vertically */
+}
+.navbar .icon {
+    cursor: pointer;
+    display: none;
+}
+a[class="icon"]:hover{
+    font-weight: light;
+    background-color: transparent;
+}
+.navbar .login-icon {
+    margin-left: auto; /* Push login icon to the right */
+}
+.login-icon {
+    width: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a[status="active"] {
+    background-color: #8dc9e1;
+}
+.no-scroll {
+    overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+    .logo {
+        flex: 1; /* Ensure the logo takes up available space */
+    }
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between; /* Space between icon and logo */
+    }
+    .navbar.responsive {
+        flex-direction: column; /* Stack items vertically */
+        height: 100vh;
+        overflow-y: auto;
+        justify-content: left;
+    }
+    .navbar.responsive .logo {
+        display: none; /* Hide the logo when menu is active */
+    }
+    .navbar a {
+        display: none;
+    }
+    .navbar.responsive a {
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5px 0; /* Reduce margin between buttons */
+    }
+    .navbar a.icon {
+        display: block;
+        font-size: 21px;
+        margin-top: -8px;
+        order: -1; /* Ensure the icon appears first in responsive view */
+    }
+    .navbar.responsive .icon {
+        position: static;
+        margin-right: 10px; /* Adjust based on your needs */
+    }
+    .navbar .login-icon {
+        order: 1; /* Ensure the login icon appears after other items */
+        margin: 10px -15px;
+        height: 15px;
+        width: 25px;
+        display: none;
+    }
+    a[class="icon"]:hover{
+        font-weight: lighter;
+    }
+    img[id="logo-img"] {
+        display: none;
+    }
+    a {
+        margin-top: 5px; /* Reduce margin between menu buttons */
+    }
+    .proto{
+        margin-left: -20px;
+        height: 100px;
+    }
+    .proto-child{
+        font-size: 9px;
+        width: 50px;
+        height: 100px;
+    }
+    .proto-child p{
+        display: none;
+    }
+    .gallery{
+        height: 300px;
+    }
+    .specs-detail{
+        font-size: 11px;
+    }
+    .specs-detail-label{
+        font-size: 14px;
+    }
+}
+div[id="body"]{
+    height: auto;
+    background-color: #f4f4f4;
+}
+
+footer{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    background-color: #000;
+    margin-bottom: -100px;
+    position: relative;
+    color: #fff;
+}
+
+/*footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}*/
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: #fff;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footer-section h2, .footer-section h3 {
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #ffc107;
+}
+
+.footer-section a i {
+    color: #fff;
+}
+
+.footer-section .social a {
+  color: #fff;
+  margin-right: 15px;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.footer-section .social a:hover {
+  color: #ffc107;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #444;
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+}

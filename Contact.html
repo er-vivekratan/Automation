@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAPPAhive - Home Automation</title>
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="test.css">
+    <script src="template.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+    <div class="navbar" id="myNavbar">
+        <a class="icon" id="menuIcon" onclick="myFunction()">
+            &#9776; <!-- Menu icon -->
+        </a>
+        <a class="icon" id="backIcon" onclick="myFunction()" style="display: none;">
+            &#x2190; <!-- Back icon -->
+        </a>
+        <div class="logo">
+            <img src="Logo.png" id="logo-img" alt="Logo">
+            <h1>CasaConnect</h1>
+        </div>
+        <a href="index.html" onclick="setActive(this)">Home</a>
+        <a href="Store.html" onclick="setActive(this)">Store</a>
+        <a href="About.html" onclick="setActive(this)">About</a>
+        <a href="Contact.html" status="active" onclick="setActive(this)">Contact</a>
+        <a href="#login" class="login-icon">
+            Login
+        </a>
+    </div>
+    
+    <div id="body">
+    
+    
+<body>
+    <div class="contact-container" style="float: left;">
+        <h1>Contact Us</h1>
+        <div class="contact-item">
+            <label class="contact-label" for="name">Name</label>
+            <input class="contact-input" type="text" id="name" name="name" placeholder="Your name">
+        </div>
+        <div class="contact-item">
+            <label class="contact-label" for="email">Email</label>
+            <input class="contact-input" type="email" id="email" name="email" placeholder="Your email">
+        </div>
+        <div class="contact-item">
+            <label class="contact-label" for="message">Message</label>
+            <textarea class="contact-textarea" id="message" name="message" placeholder="Your message"></textarea>
+        </div>
+        <div class="contact-item">
+            <button class="contact-button" type="submit">Send Message</button>
+        </div>
+    </div>
+
+    <section style="float: left;">
+        <h1 style="margin-top: 5px; font-size: 71px;">CasaConnet</h1>
+        <h2 style="margin-top: -60px;">Bappa Hive</h2>
+        <h2 style="margin-top: 5px;">Get in Touch</h2>
+        
+        <a href="tel:+918273551835" class="call">Call Us</a>
+        <a href="https://wa.me/918273551835" class="whatsapp">WhatsApp Us</a>
+        <a href="https://instagram.com/er.vivekratan" class="instagram">Instagram</a>
+        <a href="https://x.com/er.vivekratan" class="x">X (Twitter)</a>
+    </section>
+</body>
+
+
+<style>
+    body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f0f4f8;
+        color: #333;
+    }
+    .contact-container {
+        width: 45%;
+        height: 500px;
+        max-width: 400px;
+        margin: 40px auto;
+        margin-left: 50px;
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        float: left;
+    }
+    .contact-container h1 {
+        text-align: center;
+        color: #00796b;
+        font-size: 2.5em;
+    }
+    .contact-item {
+        margin-bottom: 20px;
+    }
+    .contact-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+    .contact-input, .contact-textarea {
+        width: 90%;
+        padding: 10px;
+        margin-top: 5px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+    .contact-textarea {
+        height: 70px;
+        resize: vertical;
+    }
+    .contact-button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #00796b;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+    }
+    .contact-button:hover {
+        background-color: #004d40;
+    }
+</style>
+
+
+<style>
+
+    div[id="body"]{
+        width: 100%;
+    }
+
+    section {
+        padding: 20px;
+        margin: 40px 0 0 70px;
+        height: 600px;
+        width: 50%;
+    }
+    section {
+        padding: 20px;
+        background-color: transparent;
+        text-align: center;
+    }
+    h2{
+        margin-top: 35%;
+    }
+    a {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px 5px;
+        text-decoration: none;
+        color: white;
+        border-radius: 5px;
+    }
+    .call { background-color: #28a745; }
+    .whatsapp { background-color: #25d366; }
+    .instagram { background-color: #e4405f; }
+    .x { background-color: #1da1f2; }
+</style>
+
+
+</html>
